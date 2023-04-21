@@ -6,10 +6,12 @@ $(document).ready(function(){
     $("nav .gnb").toggleClass("active");
   
   });
+  
   $(".gnb li").on('click',function(){
     $(this).parent().toggleClass("active");
     $(".trigger").toggleClass("active");
-  })
+  });
+
   const slideUl = $("#section1 ul");
   const slideLi = $("#section1 ul li");
   const slide_w = slideLi.width();
@@ -17,7 +19,7 @@ $(document).ready(function(){
   let idx = 0;
   let nidx = 0;
 
-  function slidePlay(sindex){
+  function slidePlay(nidx){
 
     targetX = -(nidx*slide_w) //움직이는 거리(너비)
 
